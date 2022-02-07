@@ -14,7 +14,7 @@ with open(path) as cook_file:
         cook_file.readline()
 print(f'Список рецептов: \n{cook_book} \n')
 
-def list_dishes(dishes, person_count):
+def get_shop_list_by_dishes(dishes, person_count):
     grocery_dict = {}
     for _dish in dishes:
         for ingredient in cook_book[_dish]:
@@ -31,4 +31,4 @@ def list_dishes(dishes, person_count):
 
 
 print(f"Cловарь с названием ингредиентов: "
-      f"\n{list_dishes(['Омлет', 'Утка по-пекински', 'Запеченный картофель', 'Омлет', 'Фахитос'], 5)}")
+      f"\n{get_shop_list_by_dishes(['Омлет', 'Утка по-пекински', 'Запеченный картофель', 'Омлет', 'Фахитос'], 5)}")
